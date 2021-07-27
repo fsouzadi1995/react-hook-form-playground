@@ -5,9 +5,40 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+main {
+  min-height: 100vh;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+form {
+  height: 200px;
+  display: grid;
+  align-content: space-around;
+  padding: 1rem;
+  text-align: center;
+}
+
+form > div {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+label {
+  margin-bottom: 0.33rem;
+}
+
+input {
+  padding: 0.5rem 1rem;
 }
