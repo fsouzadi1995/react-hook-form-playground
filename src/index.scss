@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+#root {
+  @apply bg-gray-900 min-h-screen;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+main {
+  @apply lg:max-w-6xl p-20;
+}
+
+h1 {
+  @apply text-blue-400 text-2xl mb-5;
+}
+
+form {
+  @apply grid gap-6;
+
+  > div {
+    @apply flex flex-col;
+
+    > label {
+      @apply mb-1 text-gray-300 text-sm;
+    }
+
+    > input {
+      @apply px-3 py-2 text-gray-400 bg-transparent ring-1 ring-blue-400 rounded outline-none transition-all duration-300 focus-within:ring-2 ring-blue-400;
+
+      &::placeholder {
+        @apply text-gray-500;
+      }
+
+      &::error {
+        @apply ring-red-400;
+      }
+    }
+
+    > small {
+      @apply my-3 text-xs text-red-400;
+    }
+
+    &:last-child {
+      @apply grid gap-2;
+
+      > button {
+        @apply p-2 rounded-lg text-gray-300 transition-all duration-300;
+
+        &:first-child {
+          @apply border border-transparent bg-green-700 hover:bg-green-600;
+        }
+
+        &:last-child {
+          @apply border border-indigo-900 hover:bg-indigo-900;
+        }
+      }
+    }
+  }
+}
+
+.result {
+  @apply mt-10;
+  &__body {
+    @apply bg-gray-800 px-2 py-3 rounded-md break-words;
+  }
+
+  &__bracket {
+    @apply text-gray-400;
+  }
+
+  &__key {
+    @apply text-gray-400 ml-5 mr-2;
+  }
+
+  &__value {
+    @apply text-blue-500;
+  }
+}
