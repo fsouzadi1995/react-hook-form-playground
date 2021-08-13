@@ -51,7 +51,13 @@ const Uncontrolled = (): JSX.Element => {
             })}
           />
 
-          {errors.email?.message}
+          <small
+            className={`${
+              errors.username?.type === 'required' ? 'visible' : 'invisible'
+            }`}
+          >
+            This field is required
+          </small>
 
           {/* <small
             className={`${

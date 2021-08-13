@@ -1,4 +1,5 @@
 import ControlledExample from './components/ControlledExample';
+import Spacer from './components/Spacer';
 import Uncontrolled from './components/UncontrolledExample';
 
 function App() {
@@ -8,6 +9,8 @@ function App() {
         <h1>Uncontrolled</h1>
         <Uncontrolled />
       </section>
+
+      <Spacer />
 
       <section>
         <h1>Controlled</h1>
